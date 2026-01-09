@@ -1,0 +1,244 @@
+{
+  "games": [
+    {
+      "name": "Age of Empires IV",
+      "year": 2021,
+      "publisher": "Relic Entertainment",
+      "play_time": "1.7 hours",
+      "description": "A real-time strategy game where players build civilizations, gather resources, and wage war across historical eras.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1466860/header.jpg",
+      "tasks": [
+        "Win a skirmish match against AI",
+        "Reach the Imperial Age",
+        "Play a full match with a new civilization",
+        "Complete one campaign mission",
+        "Build and defend a wonder"
+      ]
+    },
+    {
+      "name": "Age of Mythology: Retold",
+      "year": 2024,
+      "publisher": "World's Edge / Forgotten Empires",
+      "play_time": "7.5 hours",
+      "description": "A remastered version of the classic myth-based RTS, letting players control gods, myth units, and civilizations.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1934680/header.jpg",
+      "tasks": [
+        "Complete one campaign mission",
+        "Advance to the Mythic Age",
+        "Summon and use a myth unit in battle",
+        "Win a skirmish match against AI",
+        "Use a god power to turn the tide of a fight"
+      ]
+    },
+    {
+      "name": "Among Us",
+      "year": 2018,
+      "publisher": "Innersloth",
+      "play_time": "41.1 hours",
+      "description": "A social deduction game where players work together to complete tasks while impostors secretly sabotage them.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/945360/header.jpg",
+      "tasks": [
+        "Complete all assigned tasks in one match",
+        "Successfully vote out an impostor",
+        "Win a match as impostor",
+        "Win a match as crewmate",
+        "Play one full round without being eliminated"
+      ]
+    },
+    {
+      "name": "Anno 1404",
+      "year": 2009,
+      "publisher": "Related Designs",
+      "play_time": "328.7 hours",
+      "description": "A city-building and economic strategy game where players manage settlements, trade, and diplomatic relations in the medieval era.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1281630/header.jpg",
+      "tasks": [
+        "Establish a self-sufficient city",
+        "Reach a new citizen tier",
+        "Set up a profitable trade route",
+        "Complete one scenario or quest chain",
+        "Maintain positive income for 30 minutes"
+      ]
+    },
+    {
+      "name": "Brawlhalla",
+      "year": 2017,
+      "publisher": "Blue Mammoth Games",
+      "play_time": "240.5 hours",
+      "description": "A free-to-play platform fighting game featuring a variety of characters, weapons, and online multiplayer battles.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/291550/header.jpg",
+      "tasks": [
+        "Win a ranked match",
+        "Win a match with a new legend",
+        "Land a signature knockout",
+        "Play three matches in a row",
+        "Complete a daily mission"
+      ]
+    },
+    {
+      "name": "Counter-Strike 2",
+      "year": 2023,
+      "publisher": "Valve",
+      "play_time": "1523.2 hours",
+      "description": "The next iteration of the classic tactical first-person shooter, emphasizing team-based gameplay and bomb-defusal missions.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg",
+      "tasks": [
+        "Win a competitive match",
+        "Get at least one headshot kill",
+        "Plant or defuse the bomb successfully",
+        "Finish a match with positive K/D",
+        "Play a full match without leaving"
+      ]
+    },
+    {
+      "name": "Factorio",
+      "year": 2020,
+      "publisher": "Wube Software",
+      "play_time": "197 hours",
+      "description": "A factory-building game where players automate production lines, research technologies, and defend against alien attacks.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/427520/header.jpg",
+      "tasks": [
+        "Automate the production of a new item",
+        "Research a new technology",
+        "Expand the factory into a new area",
+        "Defend against a biter attack",
+        "Improve efficiency of an existing production line"
+      ]
+    },
+    {
+      "name": "Lethal Company",
+      "year": 2023,
+      "publisher": "Zeekerss",
+      "play_time": "226.3 hours",
+      "description": "A co-op horror-survival game where players work together to complete objectives while avoiding deadly threats.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1966720/header.jpg",
+      "tasks": [
+        "Complete a quota successfully",
+        "Survive a full expedition",
+        "Retrieve high-value scrap",
+        "Encounter a new enemy type",
+        "Escape with at least one teammate alive"
+      ]
+    },
+    {
+      "name": "Sea of Thieves",
+      "year": 2018,
+      "publisher": "Rare",
+      "play_time": "64.8 hours",
+      "description": "An open-world pirate adventure game focused on sailing, treasure hunting, and multiplayer naval combat.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1172620/header.jpg",
+      "tasks": [
+        "Complete a voyage",
+        "Win a naval battle",
+        "Turn in treasure at an outpost",
+        "Form or join a crew",
+        "Survive a skeleton or sea monster encounter"
+      ]
+    },
+    {
+      "name": "Slime Rancher",
+      "year": 2017,
+      "publisher": "Monomi Park",
+      "play_time": "19.6 hours",
+      "description": "A farming simulation game where players collect, feed, and manage cute slimes on a distant planet.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/433340/header.jpg",
+      "tasks": [
+        "Discover a new slime type",
+        "Feed slimes to produce plorts",
+        "Unlock a new area",
+        "Upgrade the vacpack",
+        "Earn a set amount of newbucks"
+      ]
+    },
+    {
+      "name": "Stellaris",
+      "year": 2016,
+      "publisher": "Paradox Interactive",
+      "play_time": "141.2 hours",
+      "description": "A grand strategy game set in space, focusing on exploration, empire management, and interstellar diplomacy.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/281990/header.jpg",
+      "tasks": [
+        "Survey a new star system",
+        "Establish a new colony",
+        "Make contact with another empire",
+        "Research a major technology",
+        "Survive a galactic crisis event"
+      ]
+    },
+    {
+      "name": "Terraria",
+      "year": 2011,
+      "publisher": "Re-Logic",
+      "play_time": "425 hours",
+      "description": "A sandbox adventure game blending exploration, crafting, and combat in a procedurally generated 2D world.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/105600/header.jpg",
+      "tasks": [
+        "Defeat a boss",
+        "Explore a new biome",
+        "Craft a powerful weapon or tool",
+        "Build or expand a base",
+        "Survive a major in-game event"
+      ]
+    },
+    {
+      "name": "Portal 2",
+      "year": 2011,
+      "publisher": "Valve",
+      "play_time": "23.1 hours",
+      "description": "A puzzle-platform game where players solve physics-based puzzles using a portal gun in a humorous narrative.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/620/header.jpg",
+      "tasks": [
+        "Complete a test chamber",
+        "Solve a puzzle using new mechanics",
+        "Finish a chapter",
+        "Play a co-op level",
+        "Complete a level without dying"
+      ]
+    },
+    {
+      "name": "R.E.P.O.",
+      "year": 2023,
+      "publisher": "Semiwork",
+      "play_time": "71.6 hours",
+      "description": "A roguelike action game where players navigate procedural levels, defeat enemies, and manage limited resources.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/3241660/header.jpg",
+      "tasks": [
+        "Complete a run",
+        "Survive an encounter",
+        "Reach a new area",
+        "Use an item effectively",
+        "Finish a session without dying"
+      ]
+    },
+    {
+      "name": "Omori",
+      "year": 2020,
+      "publisher": "Omocat",
+      "play_time": "49 hours",
+      "description": "A psychological RPG following a boy named Omori as he explores surreal worlds, battles enemies, and uncovers hidden memories.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1150690/header.jpg",
+      "tasks": [
+        "Complete one main story chapter",
+        "Explore a new area or world",
+        "Defeat a boss or mini-boss",
+        "Collect a key item",
+        "Interact with at least one hidden character or secret"
+      ]
+    },
+    {
+      "name": "Need for Speed: Heat",
+      "year": 2019,
+      "publisher": "Ghost Games / EA",
+      "play_time": "45.9 hours",
+      "description": "An open-world racing game where players compete in street races by day and evade police by night in the city of Palm City.",
+      "bannerUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1222680/header.jpg",
+      "tasks": [
+        "Win a day race",
+        "Win a night race",
+        "Customize a car",
+        "Escape a police chase successfully",
+        "Complete a racing event series"
+      ]
+    }
+  ]
+}
