@@ -56,7 +56,6 @@ export default function HomeScreen() {
           <Image
             source={{ uri: game.bannerUrl }}
             style={{ width: '100%', height: 120 }}
-            resizeMode="cover"
           />
 
           <View style={{ flexDirection: 'row' }}>

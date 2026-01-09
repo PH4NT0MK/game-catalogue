@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
@@ -7,7 +7,7 @@ import { ThemedView } from '@/components/themed-view';
 import { Fonts } from '@/constants/theme';
 
 import gamesData from '@/assets/data/data.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Game } from '@/types/game';
 
 export default function TabTwoScreen() {
@@ -18,6 +18,32 @@ export default function TabTwoScreen() {
     const games = gamesData.games;
     const randomIndex = Math.floor(Math.random() * games.length);
     return games[randomIndex];
+  };
+
+  const [taskCrossoutMap, setTaskCrossoutMap] = useState(new Map());
+
+  useEffect(() => {
+    if (!randomGame) {
+      return;
+    }
+
+    const newMap = new Map();
+
+    for (let i = 0; i < randomGame?.tasks?.length; i++) {
+      newMap.set(i, false);
+    }
+
+    console.log(newMap);
+
+    setTaskCrossoutMap(newMap);
+  }, [randomGame]);
+
+  const handleTaskCrossout = (i: number) => {
+    setTaskCrossoutMap(prev => {
+      const newMap = new Map(prev);
+      newMap.set(i, !newMap.get(i));
+      return newMap;
+    });
   };
 
   return (
@@ -38,11 +64,11 @@ export default function TabTwoScreen() {
           Random Game
         </ThemedText>
       </ThemedView>
-      <ThemedText style={{textAlign: 'center'}}>This area is only for the brave.</ThemedText>
+      <ThemedText style={{ textAlign: 'center' }}>This area is only for the brave.</ThemedText>
 
-      <ThemedText style={{textAlign: 'center'}}>Enter at your own risk.</ThemedText>
+      <ThemedText style={{ textAlign: 'center' }}>Enter at your own risk.</ThemedText>
 
-      <ThemedText style={{textAlign: 'center'}}>Whatever game appears, you must play it
+      <ThemedText style={{ textAlign: 'center' }}>Whatever game appears, you must play it
         and complete at least one task.</ThemedText>
 
       <Button
@@ -83,10 +109,12 @@ export default function TabTwoScreen() {
           Tasks:
         </ThemedText>
 
-        <View style={{marginHorizontal: 'auto'}}>
-          {randomGame.tasks.map((task, i) => <View key={i}>
-            <ThemedText >{i + 1}. {task}</ThemedText>
-          </View>)}
+        <View style={{ marginHorizontal: 'auto' }}>
+          {randomGame.tasks.map((task, i) => <TouchableOpacity key={i} onPress={() => { handleTaskCrossout(i) }}>
+            <View style={{ marginBottom: 10 }}>
+              <ThemedText style={{ textDecorationLine: taskCrossoutMap.get(i) ? 'line-through' : 'none' }}>{i + 1}. {task}</ThemedText>
+            </View>
+          </TouchableOpacity>)}
         </View>
       </View>}
     </ParallaxScrollView>
