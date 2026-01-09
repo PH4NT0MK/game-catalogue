@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { Button, StyleSheet, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
@@ -33,16 +33,16 @@ export default function TabTwoScreen() {
         <ThemedText
           type="title"
           style={{
-            fontFamily: Fonts.rounded,
+            fontFamily: Fonts.rounded, marginHorizontal: 'auto'
           }}>
           Random Game
         </ThemedText>
       </ThemedView>
-      <ThemedText>This area is only for the brave.</ThemedText>
+      <ThemedText style={{textAlign: 'center'}}>This area is only for the brave.</ThemedText>
 
-      <ThemedText>Enter at your own risk.</ThemedText>
+      <ThemedText style={{textAlign: 'center'}}>Enter at your own risk.</ThemedText>
 
-      <ThemedText>Whatever game appears, you must play it
+      <ThemedText style={{textAlign: 'center'}}>Whatever game appears, you must play it
         and complete at least one task.</ThemedText>
 
       <Button
@@ -53,25 +53,28 @@ export default function TabTwoScreen() {
       />
 
       {randomGame?.name && <View>
-        <View style={{ flexDirection: 'row', marginBottom: 10 }}>
-          <ThemedText
-            type="title"
-            style={{
-              fontFamily: Fonts.rounded,
-            }}>
-            {randomGame.name}
-          </ThemedText>
+        <View style={{ marginBottom: 12 }}>
+          <View style={{ marginHorizontal: 'auto', marginBottom: 10 }}>
+            <ThemedText
+              type="title"
+              style={{
+                flexShrink: 1, flexWrap: 'wrap', fontFamily: Fonts.rounded,
+              }}>
+              {randomGame.name}
+            </ThemedText>
 
-          <ThemedText style={{ marginVertical: 'auto', marginLeft: 'auto', marginRight: 0 }}>{randomGame.year}</ThemedText>
-        </View>
+            <ThemedText style={{ marginVertical: 'auto', marginHorizontal: 'auto', fontSize: 18 }}>{randomGame.year}</ThemedText>
+          </View>
 
-        <Image
-          source={{ uri: randomGame.bannerUrl }}
-          style={{ width: '100%', height: 120 }}
-          resizeMode="cover"
+          <Image
+            source={{ uri: randomGame.bannerUrl }}
+            style={{ width: '100%', height: 120 }}
           />
 
-          <ThemedText>{randomGame.description}</ThemedText>
+          <ThemedText style={{ marginLeft: 'auto', marginRight: 0 }}>Current playtime: <Text style={{ fontWeight: 'bold' }}>{randomGame.play_time}</Text></ThemedText>
+        </View>
+
+        <ThemedText style={{ textAlign: 'center' }}>{randomGame.description}</ThemedText>
 
         <ThemedText
           type="title"
@@ -81,9 +84,11 @@ export default function TabTwoScreen() {
           Tasks:
         </ThemedText>
 
-        {randomGame.tasks.map((task, i) => <>
-          <ThemedText key={`task-${i}`}>{i + 1}. {task}</ThemedText>
-        </>)}
+        <View style={{marginHorizontal: 'auto'}}>
+          {randomGame.tasks.map((task, i) => <View key={i}>
+            <ThemedText >{i + 1}. {task}</ThemedText>
+          </View>)}
+        </View>
       </View>}
     </ParallaxScrollView>
   );
