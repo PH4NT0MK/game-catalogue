@@ -26,7 +26,7 @@ export default function TabTwoScreen() {
       headerImage={
         <Image
           style={{ width: '100%', height: '100%' }}
-          source={require('../../assets/images/questionMarks.jpg')}
+          source={require('@/assets/images/questionMarks.jpg')}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -49,7 +49,6 @@ export default function TabTwoScreen() {
         onPress={() => setRandomGame(getRandomGame())}
         title="Get A Random Game"
         color="#841584"
-        accessibilityLabel="Learn more about this purple button"
       />
 
       {randomGame?.name && <View>

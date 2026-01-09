@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
@@ -7,38 +7,69 @@ import { ThemedView } from '@/components/themed-view';
 
 import gamesData from '@/assets/data/data.json';
 import { truncate } from '@/utils/truncate';
+import { useState } from 'react';
+import { Game } from '@/types/game';
 
 export default function HomeScreen() {
+
+  const [selectedGame, setSelectedGame] = useState({} as Game);
 
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
-        <Image
+        selectedGame?.name ? <Image
+          source={{ uri: selectedGame.bannerUrl }}
+          style={{ width: '100%', height: '100%' }}
+        /> : <Image
           style={{ width: '100%', height: '100%' }}
           source={require('@/assets/images/ashfall.jpg')}
         />
       }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Game catalogue</ThemedText>
-      </ThemedView>
-      {gamesData.games.map((game, i) => <View key={i}>
-        <Image
-          source={{ uri: game.bannerUrl }}
-          style={{ width: '100%', height: 120 }}
-          resizeMode="cover"
+      {selectedGame?.name ? <>
+        <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 35, textAlign: 'center' }}>
+          {selectedGame.name} ({selectedGame.year})
+        </Text>
+
+        <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 26, textAlign: 'center', marginBottom: '5%' }}>
+          By {selectedGame.publisher}
+        </Text>
+
+        <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 24, textAlign: 'center', marginBottom: '5%' }}>
+          {selectedGame.description}
+        </Text>
+
+        <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 24, textAlign: 'center' }}>
+          Your current playtime is <Text style={{ fontWeight: 'bold' }}>{selectedGame.play_time}</Text>
+        </Text>
+
+        <Button
+          onPress={() => setSelectedGame({} as Game)}
+          title="Go Back"
+          color="#841584"
         />
+      </> : <>
+        <ThemedView style={styles.titleContainer}>
+          <ThemedText type="title" style={{ marginHorizontal: 'auto', paddingBottom: 4 }}>Game catalogue</ThemedText>
+        </ThemedView>
+        {gamesData.games.map((game, i) => <TouchableOpacity key={i} onPress={() => setSelectedGame(gamesData.games[i])}>
+          <Image
+            source={{ uri: game.bannerUrl }}
+            style={{ width: '100%', height: 120 }}
+            resizeMode="cover"
+          />
 
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 20 }}>
-            {game.name}
-          </Text>
+          <View style={{ flexDirection: 'row' }}>
+            <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 20 }}>
+              {game.name}
+            </Text>
 
-          <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 12, marginVertical: 'auto', marginLeft: 'auto', marginRight: 0 }}>
-            By {truncate(game.publisher, 34)}
-          </Text>
-        </View>
-      </View>)}
+            <Text style={{ flexShrink: 1, flexWrap: 'wrap', color: '#e6e5e5', fontSize: 12, marginVertical: 'auto', marginLeft: 'auto', marginRight: 0 }}>
+              By {truncate(game.publisher, 34)}
+            </Text>
+          </View>
+        </TouchableOpacity>)}
+      </>}
     </ParallaxScrollView>
   );
 }
